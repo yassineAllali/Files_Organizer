@@ -9,7 +9,12 @@ def convert_date(timestamp):
     return value.strftime('%Y-%m-%d')
 
 
-selected_directory_path = 'C:\\Users\\PREDATOR\\Downloads'
+selected_directory_path = input('Enter the path to the directory : ')
+
+while not path.isdir(selected_directory_path):
+    print('Directory not found! Try Again with a valid path.')
+    selected_directory_path = input('Enter the path to the directory : ')
+
 base_path = Path(selected_directory_path)
 files_in_base_path = base_path.iterdir()
 
@@ -34,3 +39,5 @@ for item in files_in_base_path:
 
         # move the file to the destination directory
         shutil.move(file_path, abs_dir_path)
+
+print('\n\nOrganization succeeded!')
