@@ -7,5 +7,5 @@ python 3.6 or higher
 
 #How to use:
 
-After running the script, you will prompt to enter the path to the directory that you want to organize
+After running the script, you will be prompt to enter the path to the directory that you want to organize
 
